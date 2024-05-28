@@ -22,27 +22,16 @@
   <!--[![Backers on Open Collective](https://opencollective.com/nest/backers/badge.svg)](https://opencollective.com/nest#backer)
   [![Sponsors on Open Collective](https://opencollective.com/nest/sponsors/badge.svg)](https://opencollective.com/nest#sponsor)-->
 
-## Description
+## SETUP
 
-[Nest](https://github.com/nestjs/nest) framework TypeScript starter repository.
+```bash
+$ git clone https://github.com/akshansh-modi/cutoff-assignment.git
+```
 
 ## Installation
 
 ```bash
 $ npm install
-```
-
-## Running the app
-
-```bash
-# development
-$ npm run start
-
-# watch mode
-$ npm run start:dev
-
-# production mode
-$ npm run start:prod
 ```
 
 setting up database
@@ -73,12 +62,24 @@ CREATE TABLE WalletAddress (
     address VARCHAR(255)
 );
 ```
+
 Setting up app
 change username and password in src/app.module.ts
 
+## Running the app
 
+```bash
+# development
+$ npm run start
 
- The application will start on `http://localhost:3000`.
+# watch mode
+$ npm run start:dev
+
+# production mode
+$ npm run start:prod
+```
+
+The application will start on `http://localhost:3000`.
 
 ## API Endpoints
 
@@ -127,4 +128,3 @@ change username and password in src/app.module.ts
     }
     ```
 - **DELETE /wallet-address/:id**: Delete a wallet address by ID.
-
