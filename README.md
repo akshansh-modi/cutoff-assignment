@@ -45,29 +45,34 @@ $ npm run start:dev
 $ npm run start:prod
 ```
 
-## Test
+setting up database
+1)open psql
+
+2)Create a Database: Create a new database named nest_db.
+sql
 
 ```bash
-# unit tests
-$ npm run test
-
-# e2e tests
-$ npm run test:e2e
-
-# test coverage
-$ npm run test:cov
+CREATE DATABASE nest_db;
 ```
 
-## Support
+3)Create Tables: Create Users and WalletAddress tables.
+sql
 
-Nest is an MIT-licensed open source project. It can grow thanks to the sponsors and support by the amazing backers. If you'd like to join them, please [read more here](https://docs.nestjs.com/support).
+```bash
+CREATE TABLE Users (
+    id SERIAL PRIMARY KEY,
+    name VARCHAR(100),
+    email VARCHAR(100) UNIQUE,
+    password VARCHAR(100)
+);
 
-## Stay in touch
 
-- Author - [Kamil Myśliwiec](https://kamilmysliwiec.com)
-- Website - [https://nestjs.com](https://nestjs.com/)
-- Twitter - [@nestframework](https://twitter.com/nestframework)
+CREATE TABLE WalletAddress (
+    id SERIAL PRIMARY KEY,
+    userId INT REFERENCES Users(id),
+    address VARCHAR(255)
+);
+```
+Setting up app
+change username and password in src/app.module.ts
 
-## License
-
-Nest is [MIT licensed](LICENSE).
