@@ -128,3 +128,8 @@ The application will start on `http://localhost:3000`.
     }
     ```
 - **DELETE /wallet-address/:id**: Delete a wallet address by ID.
+
+
+
+##tested using insomnia
+https://docs.google.com/document/d/1Toa8UyMQi_JRzT82KNv8lTLYh0QybRbF_C7mp_k9Sk4/edit?usp=sharing
