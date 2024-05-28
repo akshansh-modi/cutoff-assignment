@@ -76,3 +76,55 @@ CREATE TABLE WalletAddress (
 Setting up app
 change username and password in src/app.module.ts
 
+
+
+ The application will start on `http://localhost:3000`.
+
+## API Endpoints
+
+### Users
+
+- **GET /users**: Retrieve all users.
+- **GET /users/:id**: Retrieve a user by ID.
+- **POST /users**: Create a new user.
+  - Request Body:
+    ```json
+    {
+      "name": "John Doe",
+      "email": "john@example.com",
+      "password": "password123"
+    }
+    ```
+- **PUT /users/:id**: Update a user by ID.
+  - Request Body:
+    ```json
+    {
+      "name": "Jane Doe",
+      "email": "jane@example.com",
+      "password": "newpassword123"
+    }
+    ```
+- **DELETE /users/:id**: Delete a user by ID.
+
+### WalletAddress
+
+- **GET /wallet-address**: Retrieve all wallet addresses.
+- **GET /wallet-address/:id**: Retrieve a wallet address by ID.
+- **POST /wallet-address**: Create a new wallet address.
+  - Request Body:
+    ```json
+    {
+      "userId": 1,
+      "address": "0x1234567890abcdef"
+    }
+    ```
+- **PUT /wallet-address/:id**: Update a wallet address by ID.
+  - Request Body:
+    ```json
+    {
+      "userId": 1,
+      "address": "0xfedcba0987654321"
+    }
+    ```
+- **DELETE /wallet-address/:id**: Delete a wallet address by ID.
+
