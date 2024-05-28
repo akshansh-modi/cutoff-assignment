@@ -34,7 +34,7 @@ $ git clone https://github.com/akshansh-modi/cutoff-assignment.git
 $ npm install
 ```
 
-setting up database
+##  setting up database
 1)open psql
 
 2)Create a Database: Create a new database named nest_db.
